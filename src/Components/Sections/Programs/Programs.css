@@ -1,0 +1,394 @@
+/* Container & Baseline */
+.tis-programs-section {
+  padding: 6rem 0;
+  background-color: #071124;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.tis-programs-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.tis-programs-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.tis-programs-pill {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.12);
+  padding: 0.4rem 1.1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  margin-bottom: 1rem;
+}
+
+.tis-programs-title {
+  font-family: Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .tis-programs-title {
+    font-size: 2.85rem;
+  }
+}
+
+.tis-programs-gold {
+  color: #d4af37;
+}
+
+.tis-programs-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+/* Tabs Navigation */
+.tis-programs-tabs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .tis-programs-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tis-program-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(11, 30, 63, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.tis-program-tab-btn:hover {
+  background-color: rgba(15, 36, 75, 0.8);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.tis-program-tab-btn.tis-tab-active {
+  background: linear-gradient(145deg, rgba(15, 36, 75, 0.95), rgba(11, 30, 63, 0.95));
+  border-color: #d4af37;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.tis-tab-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: color 0.25s ease;
+}
+
+.tis-tab-active .tis-tab-icon {
+  color: #d4af37;
+}
+
+.tis-tab-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.tis-tab-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tis-tab-active .tis-tab-badge {
+  color: #f7d070;
+}
+
+.tis-tab-name {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-top: 0.2rem;
+}
+
+.tis-tab-active .tis-tab-name {
+  color: #ffffff;
+}
+
+/* Selected Program Main Card */
+.tis-program-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  background-color: rgba(11, 30, 63, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 1024px) {
+  .tis-program-card {
+    grid-template-columns: 1.15fr 0.85fr;
+    padding: 3.5rem;
+    gap: 3.5rem;
+  }
+}
+
+/* Left Details */
+.tis-program-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.tis-program-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tis-meta-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0b1e3f;
+  background-color: #d4af37;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.tis-meta-grades {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.tis-program-card-title {
+  font-family: Georgia, serif;
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.tis-program-curriculum {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f7d070;
+  margin-bottom: 1.25rem;
+}
+
+.tis-curriculum-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.tis-program-card-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 1.75rem;
+}
+
+/* Highlights */
+.tis-program-highlights-block {
+  margin-bottom: 2rem;
+}
+
+.tis-highlights-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+}
+
+.tis-program-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .tis-program-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tis-program-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+}
+
+.tis-list-check {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: #d4af37;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Actions */
+.tis-program-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+@media (min-width: 640px) {
+  .tis-program-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.tis-program-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #d4af37, #f7d070);
+  color: #0b1e3f;
+  font-weight: 700;
+  font-size: 0.925rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+  transition: all 0.2s ease;
+}
+
+.tis-program-primary-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.tis-action-arrow {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 2.2;
+}
+
+.tis-program-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tis-program-outline-btn:hover {
+  border-color: #d4af37;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Right Visual */
+.tis-program-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tis-program-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tis-program-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tis-image-overlay-card {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background-color: rgba(11, 30, 63, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.tis-overlay-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.tis-overlay-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.tis-overlay-sub {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.15rem;
+}

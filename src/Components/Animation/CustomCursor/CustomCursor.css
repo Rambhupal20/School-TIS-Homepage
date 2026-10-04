@@ -1,0 +1,75 @@
+/* Container & Hide/Show */
+.tis-cursor-shell {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999999;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.tis-cursor-shell.tis-visible {
+  opacity: 1;
+}
+
+/* 1. Core Pointer Dot (Sharp & Instant) */
+.tis-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background-color: #d4af37;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+/* 2. Soft Outer Follower Ring */
+.tis-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  pointer-events: none;
+  box-sizing: border-box;
+  will-change: transform;
+  transition: width 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+              height 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+              margin 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.2s ease,
+              background-color 0.2s ease;
+}
+
+/* Hover State on clickable items */
+.tis-cursor-shell.tis-hovered .tis-cursor-dot {
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+.tis-cursor-shell.tis-hovered .tis-cursor-ring {
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  margin-left: -24px;
+  border-color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.12);
+}
+
+/* Click State (Subtle scale bounce) */
+.tis-cursor-shell.tis-clicked .tis-cursor-ring {
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  margin-left: -13px;
+  background-color: rgba(212, 175, 55, 0.25);
+  border-color: #ffffff;
+}
